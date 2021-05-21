@@ -1,3 +1,2 @@
 # share-code-to-telegram
-一键生成便于向telegram机器人发送互助码的shell
-基于lxk的jd_scripts，一键生成便于向telegram两个机器人发送互助码的shell,放在jd_scripts文件夹下运行即可。
+一键生成便于向telegram机器人发送互助码的shell。基于lxk的jd_scripts，一键生成便于向telegram两个机器人发送互助码的shell,放在jd_scripts文件夹下运行即可。
