@@ -31,7 +31,7 @@ do
       code_bean="${code_bean}&${line#【*】 }"
     elif [[ $line == *"健康社区"* ]]; then
       code_health="${code_health}&${line#【*】 }"
-    elif [[ $line == *"城城领现金"* ]]; then
+    elif [[ $line == *"城城领现金好友互助码"* ]]; then
       code_city="${code_city}&${line#【*】 }"
     fi
 done < logs/sharecodeCollection.log
