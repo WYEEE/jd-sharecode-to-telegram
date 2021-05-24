@@ -10,6 +10,7 @@ code_bean=''
 code_health=''
 code_jdzz=''
 code_jdcrazyjoy=''
+code_city=''
 while read line
 do
     if [[ $line == *"东东农场"* ]]; then
@@ -30,6 +31,8 @@ do
       code_bean="${code_bean}&${line#【*】 }"
     elif [[ $line == *"健康社区"* ]]; then
       code_health="${code_health}&${line#【*】 }"
+    elif [[ $line == *"城城领现金"* ]]; then
+      code_city="${code_city}&${line#【*】 }"
     fi
 done < logs/sharecodeCollection.log
 echo "/submit_activity_codes farm ${code_farm#&}" >> sharecode.txt
@@ -40,6 +43,7 @@ echo "/submit_activity_codes jxcfd ${code_jxcfd#&}" >> sharecode.txt
 echo "/submit_activity_codes sgmh ${code_sgmh#&}" >> sharecode.txt
 echo "/submit_activity_codes bean ${code_bean#&}" >> sharecode.txt
 echo "/submit_activity_codes health ${code_health#&}" >> sharecode.txt
+echo "/submit_activity_codes city ${code_city#&}" >> sharecode.txt
 echo "----------------------------Turing Lab Bot end--------------------------------" >> sharecode.txt
 echo -e "\n\n\n----------------------------Commit Code Bot begin--------------------------------" >> sharecode.txt
 while read line
