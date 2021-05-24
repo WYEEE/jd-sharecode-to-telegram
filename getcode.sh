@@ -11,6 +11,7 @@ code_health=''
 code_jdzz=''
 code_jdcrazyjoy=''
 code_city=''
+code_carnivalcity=''
 while read line
 do
     if [[ $line == *"东东农场"* ]]; then
@@ -44,6 +45,13 @@ echo "/submit_activity_codes sgmh ${code_sgmh#&}" >> sharecode.txt
 echo "/submit_activity_codes bean ${code_bean#&}" >> sharecode.txt
 echo "/submit_activity_codes health ${code_health#&}" >> sharecode.txt
 echo "/submit_activity_codes city ${code_city#&}" >> sharecode.txt
+while read line
+do
+    if [[ $line == *"手机狂欢城好友互助码"* ]]; then
+      code_carnivalcity="${code_carnivalcity}&${line#*】}"
+    fi
+done < logs/jd_carnivalcity.log
+echo "/submit_activity_codes carnivalcity ${code_carnivalcity#&}" >> sharecode.txt
 echo "----------------------------Turing Lab Bot end--------------------------------" >> sharecode.txt
 echo -e "\n\n\n----------------------------Commit Code Bot begin--------------------------------" >> sharecode.txt
 while read line
